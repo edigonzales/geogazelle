@@ -27,6 +27,14 @@ public class App implements EntryPoint {
 
         body().add(TextBox.create().setLabel("User name")
                                 .setPlaceholder("Username").element());
+        
+        
+        BasemapElement basemapElement = new BasemapElement();
+        body().add(basemapElement);
+        
+        LineElement lineElement = new LineElement();
+        body().add(lineElement);
+        
 
     }
 }
