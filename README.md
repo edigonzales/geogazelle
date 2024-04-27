@@ -5,5 +5,5 @@
 ```
 
 ```
-./mvnw spring-boot:run -pl *-server -am -Penv-dev
+./mvnw spring-boot:run -pl *-server -am -Penv-dev -Dspring-boot.run.profiles=dev
 ```

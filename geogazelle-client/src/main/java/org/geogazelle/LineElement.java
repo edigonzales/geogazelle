@@ -12,11 +12,13 @@ import org.jboss.elemento.InputType;
 
 public class LineElement implements IsElement<HTMLElement> {
     private StateManager stateManager;
+    private ConfigManager configManager;
 
     private final HTMLElement root;
 
     public LineElement() {
         stateManager = StateManager.getInstance(); 
+        configManager = ConfigManager.getInstance();
         
         root = div().element();
         
@@ -26,15 +28,18 @@ public class LineElement implements IsElement<HTMLElement> {
         stateManager.subscribe("activeBasemap", (oldBasemap, newBasemap) ->
             onChangeProjection(oldBasemap, newBasemap)
         );
+        
+        // TODO Noch nicht sicher, ob das so funktioniert:
+        // Wird alles richtig konfiguriert und gerendert?
+        this.configManager.loadConfig().then(obj -> {
+            
+            String id = configManager.getConfig().basemaps[1].id;
+            console.log("basemap id from LineElement:" + id);
 
+            root.appendChild(input);            
+            return null;
+        });
         
-        
-//        stateManager.subscribe("activeBasemap", ("oldValue", "newValue") -> 
-//            onChangeProjection(oldProjection, newProjection);
-//        );
-        
-        
-        root.appendChild(input);
     }
     
     @Override

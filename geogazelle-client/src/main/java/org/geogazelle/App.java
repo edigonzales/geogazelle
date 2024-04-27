@@ -20,6 +20,10 @@ public class App implements EntryPoint {
      * This is the entry point method.
      */
     public void onModuleLoad() {
+        ConfigManager configManager = ConfigManager.getInstance();
+        configManager.loadConfig();
+        console.log("Hallo Config");
+        
         DominoThemeManager.INSTANCE.apply(DominoThemeLight.INSTANCE);
         DominoThemeManager.INSTANCE.apply(DominoThemeAccent.RED); 
 

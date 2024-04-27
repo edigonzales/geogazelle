@@ -89,11 +89,13 @@
       <build>
         <plugins>
           <!-- Das ist "maven build smell", weil das Entpacken vor dem Packen kommt. Eclipse und Maven reklamiert ggf. auch. -->
+          <!-- Siehe <?m2e ignore>: Eclipse meldet keinen Fehler mehr.-->
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-dependency-plugin</artifactId>
             <executions>
               <execution>
+                <?m2e ignore?>
                 <id>unpack-gwt-war</id>
                 <phase>compile</phase>
                 <goals>

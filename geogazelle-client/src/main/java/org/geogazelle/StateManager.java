@@ -6,7 +6,6 @@ import java.util.function.BiConsumer;
 
 public class StateManager {
     private static StateManager INSTANCE;
-    //private String info = "Initial info class";
     
     private Map<String, String> stateMap = new HashMap<>();
     private Map<String, BiConsumer<String, String>> subscribers = new HashMap<>();

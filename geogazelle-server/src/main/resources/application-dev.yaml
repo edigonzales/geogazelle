@@ -1,0 +1,2 @@
+app:
+  configFile: ${CONFIG_FILE:../dev/config.json}
