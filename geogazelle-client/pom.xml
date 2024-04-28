@@ -38,6 +38,13 @@
       <artifactId>elemento-core</artifactId>
       <version>1.4.8</version>
     </dependency>
+    
+    <dependency>
+      <groupId>com.github.tdesjardins</groupId>
+      <artifactId>gwt-ol3</artifactId>
+      <version>8.4.1</version>
+   </dependency>
+
 
     <dependency>
       <groupId>${project.groupId}</groupId>

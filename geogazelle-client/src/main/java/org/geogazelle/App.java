@@ -5,7 +5,26 @@ import static org.jboss.elemento.Elements.*;
 
 import com.google.gwt.core.client.EntryPoint;
 
+import ol.Collection;
+import ol.Coordinate;
+import ol.Extent;
+import ol.MapOptions;
+import ol.OLFactory;
+import ol.View;
+import ol.ViewOptions;
+import ol.layer.LayerOptions;
+import ol.layer.Tile;
+import ol.proj.Projection;
+import ol.proj.ProjectionOptions;
+import ol.source.Wmts;
+import ol.source.WmtsOptions;
+import ol.tilegrid.TileGrid;
+import ol.tilegrid.WmtsTileGrid;
+import ol.tilegrid.WmtsTileGridOptions;
+import proj4.Proj4;
+
 import org.dominokit.domino.ui.themes.DominoThemeManager;
+import org.geogazelle.components.map.MapComponent;
 import org.dominokit.domino.ui.themes.DominoThemeAccent;
 import org.dominokit.domino.ui.themes.DominoThemeLight;
 
@@ -29,15 +48,18 @@ public class App implements EntryPoint {
 
         console.log("Hallo Stefan.");
 
-        body().add(TextBox.create().setLabel("User name")
-                                .setPlaceholder("Username").element());
+//        body().add(TextBox.create().setLabel("User name")
+//                                .setPlaceholder("Username").element());
+//        
+//        
+//        BasemapElement basemapElement = new BasemapElement();
+//        body().add(basemapElement);
+//        
+//        LineElement lineElement = new LineElement();
+//        body().add(lineElement);
         
-        
-        BasemapElement basemapElement = new BasemapElement();
-        body().add(basemapElement);
-        
-        LineElement lineElement = new LineElement();
-        body().add(lineElement);
+        body().add(div().id("ol-map"));
+        MapComponent mapComponent = new MapComponent();
         
 
     }
