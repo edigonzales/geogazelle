@@ -33,13 +33,11 @@ public class MapComponent implements IsElement<HTMLElement> {
         viewManager = ViewManager.getInstance();
         
         olMap = mapManager.getInstance().getMap();
-        
         olMap.setTarget("ol-map");
         
         View view = viewManager.getView();
         olMap.setView(view);
         
-               
         double resolutions[] = new double[] { 4000.0, 2000.0, 1000.0, 500.0, 250.0, 100.0, 50.0, 20.0, 10.0, 5.0, 2.5, 1.0, 0.5, 0.25, 0.1 };
 
         WmtsOptions wmtsOptions = OLFactory.createOptions();

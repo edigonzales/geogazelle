@@ -24,7 +24,7 @@ public class MapManager {
             
 //            MouseWheelZoom mwz = new MouseWheelZoom();
 //            mwz.set("constrainResolution", true);
-//            interactionOptions.setConstrainResolution(true);
+            interactionOptions.setConstrainResolution(true);
             interactionOptions.setDoubleClickZoom(false);
             mapOptions.setInteractions(Interaction.defaults(interactionOptions));
             
