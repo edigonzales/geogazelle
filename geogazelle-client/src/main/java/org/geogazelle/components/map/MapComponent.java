@@ -40,8 +40,10 @@ public class MapComponent implements IsElement<HTMLElement> {
         
         double resolutions[] = new double[] { 4000.0, 2000.0, 1000.0, 500.0, 250.0, 100.0, 50.0, 20.0, 10.0, 5.0, 2.5, 1.0, 0.5, 0.25, 0.1 };
 
+        //https://d2k8oaoqx7i99k.cloudfront.net/
+        //https://geo.so.ch/api/wmts/
         WmtsOptions wmtsOptions = OLFactory.createOptions();
-        wmtsOptions.setUrl("https://geo.so.ch/api/wmts/1.0.0/{Layer}/default/2056/{TileMatrix}/{TileRow}/{TileCol}");
+        wmtsOptions.setUrl("https://d2k8oaoqx7i99k.cloudfront.net/1.0.0/{Layer}/default/2056/{TileMatrix}/{TileRow}/{TileCol}");
         wmtsOptions.setLayer("ch.so.agi.hintergrundkarte_sw");
         wmtsOptions.setRequestEncoding("REST");
         wmtsOptions.setFormat("image/png");
